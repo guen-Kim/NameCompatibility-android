@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+<!--    -->
+    <style name="TextSubtitle1" parent="TextAppearance.MaterialComponents.Subtitle1">
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="TextSubtitle1.Bold">
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="TextSubtitle1.White">
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+
+    <style name="TextSubtitle1.White.Bold">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+
+
+    <style name="TextSubtitle2" parent="TextAppearance.MaterialComponents.Subtitle1">
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="TextSubtitle2.Bold">
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="TextSubtitle2.black">
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+
+    <style name="TextSubtitle2.black.Bold">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+
+<!--    -->
+    <style name="TextTitle">
+        <item name="android:textColor">@color/main_color</item>
+        <item name="android:textSize">32sp</item>
+    </style>
+
+    <style name="TextTitle.Bold">
+        <item name="android:textColor">@color/main_color</item>
+    </style>
+
+
+
+
+</resources>
