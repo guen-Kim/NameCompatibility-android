@@ -5,6 +5,10 @@
 
     <data>
 
+        <variable
+            name="fragment"
+            type="com.example.presentation.view.WomanNameFragment" />
+
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -44,6 +48,7 @@
             android:layout_height="wrap_content"
             android:background="@drawable/name_setting_btn_frame"
             android:gravity="center"
+            android:onClick="@{fragment::nextBtnClick}"
             android:padding="10dp"
             android:text="궁합보기"
             app:layout_constraintBottom_toBottomOf="parent"
