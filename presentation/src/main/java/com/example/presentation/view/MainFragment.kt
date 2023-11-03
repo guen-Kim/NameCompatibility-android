@@ -10,14 +10,10 @@ import com.example.presentation.databinding.FragmentMainBinding
 class MainFragment : BaseFragment<FragmentMainBinding>(R.layout.fragment_main) {
     override fun init() {
         binding.fragment = this
-
     }
-
 
     fun startBtnClick(view: View){
         this.findNavController().navigate(R.id.action_mainFragment_to_manNameFragment)
     }
-
-
 
 }
