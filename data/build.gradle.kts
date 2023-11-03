@@ -1,16 +1,16 @@
 plugins {
     id("com.android.library")
     id("org.jetbrains.kotlin.android")
-    id ("kotlin-kapt")
-    id ("dagger.hilt.android.plugin")
+    kotlin("kapt")
+    id("com.google.dagger.hilt.android")
 }
 
 android {
     namespace = "com.example.data"
-    compileSdk = 34
+    compileSdk = SdkVersions.compileSdk
 
     defaultConfig {
-        minSdk = 21
+        minSdk = SdkVersions.minSdk
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles("consumer-rules.pro")
@@ -32,6 +32,11 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
+}
+
+// Allow references to generated code
+kapt {
+    correctErrorTypes = true
 }
 
 dependencies {

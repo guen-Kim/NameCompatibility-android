@@ -1,20 +1,20 @@
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
-    id("kotlin-kapt")
-    id("dagger.hilt.android.plugin")
+    kotlin("kapt")
+    id("com.google.dagger.hilt.android")
 }
 
 android {
     namespace = "com.example.namecompatibility"
-    compileSdk = 34
+    compileSdk = SdkVersions.compileSdk
 
     defaultConfig {
         applicationId = "com.example.namecompatibility"
-        minSdk = 21
-        targetSdk = 34
-        versionCode = 1
-        versionName = "1.0"
+        minSdk = SdkVersions.minSdk
+        targetSdk = SdkVersions.targetSdk
+        versionCode = AppVersions.androidVersionCode
+        versionName = AppVersions.androidVersionName
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -39,6 +39,10 @@ android {
     buildFeatures {
         dataBinding = true
     }
+}
+// Allow references to generated code
+kapt {
+    correctErrorTypes = true
 }
 
 dependencies {
