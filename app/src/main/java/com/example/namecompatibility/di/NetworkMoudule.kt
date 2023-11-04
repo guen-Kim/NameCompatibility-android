@@ -1,5 +1,6 @@
 package com.example.namecompatibility.di
 
+import com.example.data.remote.api.LoveCalculatorApi
 import com.example.namecompatibility.utils.Utils.BASE_URL
 import dagger.Module
 import dagger.Provides
@@ -49,14 +50,12 @@ object NetworkModule {
             .build()
     }
 
-/*
     @Provides
     @Singleton
     //LoveCalculatorApi interface 의존성 주입
     fun provideLoveCalculatorApiService(retrofit: Retrofit): LoveCalculatorApi {
         return retrofit.create(LoveCalculatorApi::class.java)
     }
-*/
 
     private fun getLoggingInterceptor(): HttpLoggingInterceptor =
         HttpLoggingInterceptor().apply { level = HttpLoggingInterceptor.Level.BODY }
