@@ -8,8 +8,8 @@ enum class ErrorType {
     TIMEOUT,
 
     //세션 만료
-    SESSION_EXPITRED,
+    SESSION_EXPIRED,
 
     //알수 없는 다른 문제
-    UNKOWN,
+    UNKNOWN,
 }
