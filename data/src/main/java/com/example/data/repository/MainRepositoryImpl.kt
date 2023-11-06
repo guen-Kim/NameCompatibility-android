@@ -1,5 +1,6 @@
 package com.example.data.repository
 
+import com.example.data.mapper.MainMapper
 import com.example.data.repository.remote.datasource.MainDataSource
 import com.example.domain.model.DomainLoveResponse
 import com.example.domain.repository.MainRepository
@@ -16,6 +17,13 @@ class MainRepositoryImpl @Inject constructor(
         mName: String,
         wName: String
     ): DomainLoveResponse? {
-        return mainDataSource.checkLoveCalculator(remoteErrorEmitter, host, key, mName, wName)
+        return MainMapper.loveMapper(
+            mainDataSource.checkLoveCalculator(
+                remoteErrorEmitter,
+                host,
+                key,
+                mName,
+                wName
+            ))
     }
 }
