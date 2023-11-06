@@ -1,8 +1,8 @@
-package com.example.data.repository.datasourceimpl
+package com.example.data.repository.remote.datasourceimpl
 
 import com.example.data.remote.api.LoveCalculatorApi
 import com.example.data.remote.model.DataLoveResponse
-import com.example.data.repository.datasource.MainDataSource
+import com.example.data.repository.remote.datasource.MainDataSource
 import com.example.data.utils.base.BaseDataSource
 import com.example.domain.utils.RemoteErrorEmitter
 import javax.inject.Inject
