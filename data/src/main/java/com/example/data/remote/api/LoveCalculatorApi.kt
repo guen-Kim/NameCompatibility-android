@@ -10,7 +10,7 @@ interface LoveCalculatorApi {
     @GET("/getPercentage")
     suspend fun getPercentage(
         @Header("X-RapidAPI-Key") key: String,
-        @Header("X-RapidAPI-Host") hose: String,
+        @Header("X-RapidAPI-Host") host: String,
         @Query("sname") sName: String,
         @Query("fname") fName: String,
     ): Response<DataLoveResponse>
