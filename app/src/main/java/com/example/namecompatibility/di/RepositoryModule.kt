@@ -2,6 +2,7 @@ package com.example.namecompatibility.di
 
 import com.example.data.repository.MainRepositoryImpl
 import com.example.data.repository.remote.datasource.MainDataSource
+import com.example.domain.repository.MainRepository
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -17,7 +18,7 @@ class RepositoryModule {
     @Singleton
     fun provideMainRepository(
         mainDataSource: MainDataSource
-    ) : MainRepositoryImpl{
+    ) : MainRepository {
         return MainRepositoryImpl(
             mainDataSource
         )
