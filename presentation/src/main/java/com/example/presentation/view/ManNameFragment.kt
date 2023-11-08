@@ -18,12 +18,12 @@ class ManNameFragment : BaseFragment<FragmentManNameBinding>(R.layout.fragment_m
 
     override fun init() {
         binding.fragment = this
-
+        observeMainViewModel()
     }
 
 
     fun resultBtnClick(view: View) {
-
+        binding.lodingBar.visibility = View.VISIBLE
         mainViewModel.manNameResult = binding.etName.text.toString()
         mainViewModel.checkLoveCalculator(
             "love-calculator.p.rapidapi.com",
@@ -35,6 +35,8 @@ class ManNameFragment : BaseFragment<FragmentManNameBinding>(R.layout.fragment_m
 
 
     private fun observeMainViewModel() {
+        // remote API observe
+        binding.lodingBar.visibility = View.INVISIBLE
         mainViewModel.apiCallEvent.observe(this, EventObserver {
             when (it) {
                 ScreenState.LOADING -> this.findNavController().navigate(R.id.action_manNameFragment_to_resultFragment)
