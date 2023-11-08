@@ -1,5 +1,6 @@
 package com.example.presentation.view
 
+import android.util.Log
 import android.view.View
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
@@ -7,15 +8,17 @@ import com.example.presentation.R
 import com.example.presentation.base.BaseFragment
 import com.example.presentation.databinding.FragmentResultBinding
 import com.example.presentation.view.viewMdel.MainViewModel
+import dagger.hilt.android.AndroidEntryPoint
 
 
-
+@AndroidEntryPoint
 class ResultFragment : BaseFragment<FragmentResultBinding>(R.layout.fragment_result) {
     private val mainViewModel by viewModels<MainViewModel> ()
 
     override fun init() {
+        Log.d("asdfasdfasdf", mainViewModel.apiErrorType.toString())
         binding.fragment = this
-
+        initReulst()
     }
     private fun initReulst(){
         binding.tvScore.text = mainViewModel.apiCallResult.result.toString()
