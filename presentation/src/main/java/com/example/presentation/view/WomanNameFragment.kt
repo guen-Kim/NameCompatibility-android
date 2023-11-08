@@ -10,14 +10,12 @@ import com.example.presentation.databinding.FragmentWomanBinding
 import com.example.presentation.view.viewMdel.MainViewModel
 import dagger.hilt.android.AndroidEntryPoint
 
-@AndroidEntryPoint
 class WomanNameFragment : BaseFragment<FragmentWomanBinding>(R.layout.fragment_woman) {
 
    private val mainViewModel by activityViewModels<MainViewModel> ()
 
 
     override fun init() {
-        Log.d("asdfasdfasdf", mainViewModel.toString())
         binding.fragment = this
     }
 

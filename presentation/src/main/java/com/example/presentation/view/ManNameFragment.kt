@@ -1,6 +1,5 @@
 package com.example.presentation.view
 
-import android.util.Log
 import android.view.View
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
@@ -11,10 +10,8 @@ import com.example.presentation.base.BaseFragment
 import com.example.presentation.databinding.FragmentManNameBinding
 import com.example.presentation.view.viewMdel.MainViewModel
 import com.example.presentation.widget.EventObserver
-import dagger.hilt.android.AndroidEntryPoint
 
 
-@AndroidEntryPoint
 class ManNameFragment : BaseFragment<FragmentManNameBinding>(R.layout.fragment_man_name) {
     private val mainViewModel by activityViewModels<MainViewModel>()
 
