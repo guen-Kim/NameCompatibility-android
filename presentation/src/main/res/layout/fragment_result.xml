@@ -34,6 +34,7 @@
                 android:src="@drawable/ic_result" />
 
             <TextView
+                android:id="@+id/tv_score"
                 style="@style/TextTitle.Bold"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -41,6 +42,7 @@
                 tools:text="100" />
 
             <TextView
+                android:id="@+id/tv_msg"
                 style="@style/TextSubtitle2.black.Bold"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
