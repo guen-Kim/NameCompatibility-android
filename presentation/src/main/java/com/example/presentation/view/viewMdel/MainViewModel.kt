@@ -27,7 +27,8 @@ class MainViewModel @Inject constructor(
     var apiErrorType = ErrorType.UNKNOWN
     var apiErrorMesses = "none"
 
-    
+    var manNameResult = "man"
+    var womanNameResult = "woman"
     
     fun checkLoveCalculator(host: String, key: String, mName: String, wName: String) =
         viewModelScope.launch {
