@@ -11,8 +11,8 @@
         android:label="fragment_main"
         tools:layout="@layout/fragment_main" >
         <action
-            android:id="@+id/action_mainFragment_to_manNameFragment"
-            app:destination="@id/manNameFragment" />
+            android:id="@+id/action_mainFragment_to_womanNameFragment"
+            app:destination="@id/womanNameFragment" />
     </fragment>
     <fragment
         android:id="@+id/resultFragment"
@@ -29,8 +29,8 @@
         android:label="fragment_woman"
         tools:layout="@layout/fragment_woman" >
         <action
-            android:id="@+id/action_womanNameFragment_to_resultFragment"
-            app:destination="@id/resultFragment" />
+            android:id="@+id/action_womanNameFragment_to_manNameFragment"
+            app:destination="@id/manNameFragment" />
     </fragment>
     <fragment
         android:id="@+id/manNameFragment"
@@ -38,7 +38,7 @@
         android:label="fragment_man_name"
         tools:layout="@layout/fragment_man_name" >
         <action
-            android:id="@+id/action_manNameFragment_to_womanNameFragment"
-            app:destination="@id/womanNameFragment" />
+            android:id="@+id/action_manNameFragment_to_resultFragment"
+            app:destination="@id/resultFragment" />
     </fragment>
 </navigation>
