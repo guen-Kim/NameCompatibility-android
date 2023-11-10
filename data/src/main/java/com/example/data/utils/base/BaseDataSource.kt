@@ -1,9 +1,13 @@
 package com.example.data.utils.base
 
 import android.util.Log
+import com.example.domain.model.FirebaseState
+import com.example.domain.model.GetFirebaseResponse
 import com.example.domain.utils.ErrorType
 import com.example.domain.utils.RemoteErrorEmitter
+import com.google.android.gms.tasks.Task
 import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.tasks.await
 import kotlinx.coroutines.withContext
 import okhttp3.ResponseBody
 import org.json.JSONObject
@@ -97,4 +101,29 @@ abstract class BaseDataSource {
             "Something wrong happened"
         }
     }
+
+
+    suspend inline fun <T> safeGetFirebaseRTDBCall(crossinline callFunction: () -> Task<T>) : GetFirebaseResponse<T> {
+        var state = FirebaseState.FAILURE
+        var result : T? = null
+        callFunction.invoke()
+            .addOnSuccessListener {
+                result = it
+                state = FirebaseState.SUCCESS
+            }
+            .addOnFailureListener {
+                state = FirebaseState.FAILURE
+            }.await()
+
+        return GetFirebaseResponse(state = state, result = result)
+    }
+
+
+
+
+
+
+
+
+
 }
