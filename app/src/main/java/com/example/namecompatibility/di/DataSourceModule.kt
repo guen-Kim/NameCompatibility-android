@@ -2,7 +2,7 @@ package com.example.namecompatibility.di
 
 import com.example.data.remote.api.LoveCalculatorApi
 import com.example.data.repository.remote.datasource.MainDataSource
-import com.example.data.repository.remote.datasourceimpl.MainDataSourceImple
+import com.example.data.repository.remote.datasourceimpl.MainDataSourceImpl
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -18,7 +18,7 @@ class DataSourceModule {
     fun provideMainDataSource(
         loveCalculatorApi: LoveCalculatorApi
     ) : MainDataSource{
-        return MainDataSourceImple(loveCalculatorApi)
+        return MainDataSourceImpl(loveCalculatorApi)
     }
 
 

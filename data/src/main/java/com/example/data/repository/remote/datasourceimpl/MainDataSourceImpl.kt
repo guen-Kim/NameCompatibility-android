@@ -7,7 +7,7 @@ import com.example.data.utils.base.BaseDataSource
 import com.example.domain.utils.RemoteErrorEmitter
 import javax.inject.Inject
 
-class MainDataSourceImple @Inject constructor(
+class MainDataSourceImpl @Inject constructor(
     private val loveCalculatorApi: LoveCalculatorApi
 ): BaseDataSource(), MainDataSource {
     override suspend fun checkLoveCalculator(
