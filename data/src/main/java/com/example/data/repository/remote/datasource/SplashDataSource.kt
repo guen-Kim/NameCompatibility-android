@@ -1,9 +1,9 @@
 package com.example.data.repository.remote.datasource
 
-import com.google.android.gms.tasks.Task
-import com.google.firebase.database.DataSnapshot
+import com.example.domain.model.GetFirebaseResponse
+
 
 interface SplashDataSource {
 
-    suspend fun checkVersion(): Task<DataSnapshot>
+    suspend fun checkVersion(): GetFirebaseResponse<String>
 }
